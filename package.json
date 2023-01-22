@@ -1,0 +1,12 @@
+{
+  "name": "google-autocomplete-extractor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "Nacho Mascort <nacho.mascort@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "html-to-text": "^9.0.3"
+  }
+}
