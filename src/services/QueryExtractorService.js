@@ -7,10 +7,16 @@ export default class QueryExtractorService {
   }
 
   async execute(query, lang) {
-    const dataP = this.abc.map(letter => {
+    const dataLetterQueryP = this.abc.map(letter => {
 
       return this._requestAutocomplete(`${letter} ${query}`, lang)
     })
+    const dataQueryLetterP = this.abc.map(letter => {
+
+      return this._requestAutocomplete(`${query} ${letter}`, lang)
+    })
+
+    const dataP  = [...dataLetterQueryP, ...dataQueryLetterP]
 
     const data = await Promise.all(dataP)
 
